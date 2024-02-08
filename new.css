@@ -11,6 +11,8 @@
 
 .second-text {
   animation-name: flyInRight;
+  animation-duration: 2s; /* Adjust duration as needed */
+  animation-fill-mode: forwards; /* Keep the final state of the animation */
 }
 
 @keyframes flyInLeft {
@@ -26,4 +28,6 @@
 
 .fourth-text {
   animation-name: flyInLeft;
+  animation-duration: 2s; /* Adjust duration as needed */
+  animation-fill-mode: forwards; /* Keep the final state of the animation */
 }

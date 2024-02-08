@@ -22,10 +22,10 @@
 
 .heart {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
+  top: 30;
+  left: 40;
+  width: 1000px;
+  height: 1000px;
   background-color: red;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }

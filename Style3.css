@@ -1,3 +1,4 @@
+/* style3.css */
 html {
   height: 100%;
 }
@@ -18,28 +19,23 @@ body {
   background: red;
   transform: rotate(45deg);
   position: absolute;
-  left: 200px;
-  top: 200px;
 }
 
-.heart .left {
+.heart .left, .heart .right {
   content: '';
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: red;
   position: absolute;
+}
+
+.heart .left {
   left: -25px;
   top: 0px;
 }
 
 .heart .right {
-  content: '';
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: red;
-  position: absolute;
   left: 0px;
   top: -25px;
 }

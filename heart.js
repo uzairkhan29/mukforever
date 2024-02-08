@@ -1,3 +1,4 @@
+// heart.js
 const hearts = [];
 const pinks = ["#ff748c", "#ff8da1", "#ffa7b6"];
 
@@ -8,8 +9,8 @@ class Heart {
     this.theta = Math.random() * Math.PI * 2;
     const heartEl = document.createElement("div");
     heartEl.classList.add("heart");
-    document.body.append(heartEl); // You might want to append hearts to a container element instead
-    const color = pinks[parseInt(Math.random() * pinks.length)];
+    document.querySelector(".heart-container").append(heartEl); // Append to heart-container
+    const color = pinks[Math.floor(Math.random() * pinks.length)]; // Use Math.floor instead of parseInt
     heartEl.style.background = color;
     
     const heartLeftEl = document.createElement("div");
@@ -26,7 +27,7 @@ class Heart {
     
     setTimeout(() => {
       this.el.remove();
-      hearts.splice(hearts.indexOf(this)); // Fix: Remove from global array
+      hearts.splice(hearts.indexOf(this), 1); // Remove one element from the array
     }, 10000)
   }
 

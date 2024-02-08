@@ -3,9 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: #f5d7ab;
 }
+
 .container {
   height: 350px;
   width: 350px;
@@ -14,6 +16,7 @@ body {
   left: 50%;
   top: 50%;
 }
+
 .bread {
   width: 150px;
   height: 40px;
@@ -23,6 +26,7 @@ body {
   top: 80px;
   right: 50px;
 }
+
 .bread:before {
   content: "";
   position: absolute;
@@ -33,6 +37,7 @@ body {
   left: 10px;
   top: 8px;
 }
+
 .bottom {
   background-color: #f5c493;
   width: 130px;
@@ -44,6 +49,7 @@ body {
   border-top: none;
   border-radius: 0 0 15px 15px;
 }
+
 .bread:after {
   position: absolute;
   content: "";
@@ -55,6 +61,7 @@ body {
   left: 55px;
   box-shadow: 25px 0 #202020;
 }
+
 .bottom:before {
   position: absolute;
   content: "";
@@ -67,6 +74,7 @@ body {
   top: 40px;
   border-radius: 0 0 22.5px 22.5px;
 }
+
 .bottom:after {
   position: absolute;
   content: "";
@@ -79,6 +87,7 @@ body {
   box-shadow: -10px 10px #f59362, 0 20px #f59362, 65px 0 #f59362,
     75px 10px #f59362, 65px 20px #f59362;
 }
+
 .leg {
   position: absolute;
   height: 55px;
@@ -88,6 +97,7 @@ body {
   left: 60px;
   box-shadow: 25px 0 #202020;
 }
+
 .leg:before {
   position: absolute;
   content: "";
@@ -99,6 +109,7 @@ body {
   border-radius: 5px;
   box-shadow: 36px 0 #202020;
 }
+
 .jam {
   background-color: #f53162;
   height: 110px;
@@ -108,6 +119,7 @@ body {
   left: 70px;
   border-radius: 15px;
 }
+
 .jam:before {
   content: "";
   position: absolute;
@@ -118,6 +130,7 @@ body {
   left: 8px;
   bottom: 10px;
 }
+
 .jam:after {
   content: "";
   position: absolute;
@@ -128,6 +141,7 @@ body {
   left: 8px;
   top: 15px;
 }
+
 .lid {
   background-color: #62c4c4;
   height: 20px;
@@ -137,6 +151,7 @@ body {
   top: -20px;
   border-radius: 5px;
 }
+
 .label {
   background-color: #ffffff;
   height: 50px;
@@ -149,6 +164,7 @@ body {
   top: 0;
   bottom: 0;
 }
+
 .strawberry {
   position: absolute;
   background-color: #319362;
@@ -158,6 +174,7 @@ body {
   left: 13px;
   border-radius: 0 13px;
 }
+
 .strawberry:before {
   position: absolute;
   content: "";
@@ -169,6 +186,7 @@ body {
   left: 10px;
   transform: rotateY(-180deg);
 }
+
 .strawberry:after {
   position: absolute;
   content: "";
@@ -179,6 +197,7 @@ body {
   top: 8px;
   left: 0;
 }
+
 .hand {
   height: 4px;
   width: 107px;
@@ -186,42 +205,8 @@ body {
   position: absolute;
   right: -139px;
 }
+
 .hand:after {
   position: absolute;
   content: "";
   background-color: #202020;
-  height: 15px;
-  width: 4px;
-  border-radius: 4px;
-  left: -3px;
-  bottom: 0;
-  box-shadow: -35px -40px #202020;
-}
-.fa-heart {
-  color: #f53162;
-  font-size: 20px;
-  position: absolute;
-  left: 150px;
-  top: 160px;
-  animation: heartbeat 5s infinite;
-}
-@keyframes heartbeat {
-  60% {
-    font-size: 50px;
-    transform: translateY(-160px);
-  }
-  100% {
-    font-size: 50px;
-    transform: translateY(-160px);
-  }
-}
-h3 {
-  width: 100%;
-  position: absolute;
-  text-align: center;
-  bottom: 20px;
-  font-family: "Poppins", sans-serif;
-  color: #f53162;
-  letter-spacing: 4px;
-  text-transform: capitalize;
-}

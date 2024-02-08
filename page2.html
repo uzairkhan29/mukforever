@@ -9,29 +9,21 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
   />
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style2.css" /> <!-- Style for envelope -->
+  <link rel="stylesheet" href="style2.css" /> <!-- Apply appropriate CSS -->
 </head>
 <body>
-  <div class="container">
-    <i class="fas fa-envelope" id="envelope"></i> <!-- Envelope icon -->
+  <div class="envelope" onclick="showLetter()">
+    <i class="fas fa-envelope"></i>
   </div>
-
-  <!-- Hidden letter -->
   <div class="letter" id="letter">
-    <p>Never ever leaving you</p>
+    <p>Hover over me to see the letter!</p>
   </div>
 
   <script>
-    const envelope = document.getElementById("envelope");
-    const letter = document.getElementById("letter");
-
-    envelope.addEventListener("mouseover", () => {
-      letter.style.display = "block"; // Show the letter on hover
-    });
-
-    envelope.addEventListener("mouseout", () => {
-      letter.style.display = "none"; // Hide the letter when mouse leaves
-    });
+    function showLetter() {
+      const letter = document.getElementById("letter");
+      letter.classList.toggle("show");
+    }
   </script>
 </body>
 </html>

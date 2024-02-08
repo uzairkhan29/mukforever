@@ -88,6 +88,19 @@
         <div class="box transparent-bg"></div>
         <div class="box transparent-bg"></div>
     </div>
+ <!-- JavaScript to redirect to index2.html after animation -->
+ <script>
+  // Function to redirect to index2.html
+  function redirectToNextPage() {
+      window.location.href = 'index2.html';
+  }
+
+  // Get the heart animation duration
+  var heartAnimationDuration = 6; // seconds
+
+  // Wait for the heart animation to finish, then redirect
+  setTimeout(redirectToNextPage, heartAnimationDuration * 1000);
+</script>
 </body>
 
 </html>

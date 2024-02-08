@@ -15,6 +15,18 @@
     <div class="whole-heart">
         <div class="piece-of-heart"></div>
     </div>
+    <script>
+        // Function to redirect to index2.html
+        function redirectToNextPage() {
+            window.location.href = 'index3.html';
+        }
+      
+        // Get the heart animation duration
+        var heartAnimationDuration = 12; // seconds
+      
+        // Wait for the heart animation to finish, then redirect
+        setTimeout(redirectToNextPage, heartAnimationDuration * 3000);
+      </script>
 </body>
 
 </html>

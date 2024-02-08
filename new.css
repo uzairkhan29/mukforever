@@ -1,23 +1,39 @@
 @keyframes popOut {
   0% {
     transform: scale(0);
+    opacity: 0;
   }
   100% {
     transform: scale(1);
+    opacity: 1;
   }
 }
 
-.heart {
-  position: relative;
-  display: inline-block;
+.animation-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.heart-text {
+.heart-container {
+  position: relative;
+}
+
+.heart {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 50px;
-  color: red;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.text-container {
+  position: relative;
+  z-index: 1; /* Ensure text appears above the heart */
+  padding: 20px;
 }
 
 .first-text,
@@ -25,24 +41,23 @@
 .third-text,
 .fourth-text,
 .fifth-text {
-  opacity: 0;
   animation-name: popOut;
   animation-duration: 1s;
   animation-fill-mode: forwards; /* Keep the final state of the animation */
 }
 
 .second-text {
-  animation-delay: 1s; /* Delay for the second text */
+  animation-delay: 0.5s; /* Delay for the second text */
 }
 
 .third-text {
-  animation-delay: 2s; /* Delay for the third text */
+  animation-delay: 1s; /* Delay for the third text */
 }
 
 .fourth-text {
-  animation-delay: 3s; /* Delay for the fourth text */
+  animation-delay: 1.5s; /* Delay for the fourth text */
 }
 
 .fifth-text {
-  animation-delay: 4s; /* Delay for the fifth text */
+  animation-delay: 2s; /* Delay for the fifth text */
 }

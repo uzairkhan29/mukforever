@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page 2</title>
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style2.css" /> <!-- Style for envelope -->
+</head>
+<body>
+  <div class="container">
+    <i class="fas fa-envelope" id="envelope"></i> <!-- Envelope icon -->
+  </div>
+
+  <!-- Hidden letter -->
+  <div class="letter" id="letter">
+    <p>Never ever leaving you</p>
+  </div>
+
+  <script>
+    const envelope = document.getElementById("envelope");
+    const letter = document.getElementById("letter");
+
+    envelope.addEventListener("mouseover", () => {
+      letter.style.display = "block"; // Show the letter on hover
+    });
+
+    envelope.addEventListener("mouseout", () => {
+      letter.style.display = "none"; // Hide the letter when mouse leaves
+    });
+  </script>
+</body>
+</html>

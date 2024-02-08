@@ -1,33 +1,48 @@
-@keyframes flyInRight {
+@keyframes popOut {
   0% {
-    opacity: 0;
-    transform: translateX(100%) translateY(-50%);
+    transform: scale(0);
   }
   100% {
-    opacity: 1;
-    transform: translateX(0) translateY(-50%);
+    transform: scale(1);
   }
+}
+
+.heart {
+  position: relative;
+  display: inline-block;
+}
+
+.heart-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 50px;
+  color: red;
+}
+
+.first-text,
+.second-text,
+.third-text,
+.fourth-text,
+.fifth-text {
+  opacity: 0;
+  animation-name: popOut;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; /* Keep the final state of the animation */
 }
 
 .second-text {
-  animation-name: flyInRight;
-  animation-duration: 2s; /* Adjust duration as needed */
-  animation-fill-mode: forwards; /* Keep the final state of the animation */
+  animation-delay: 1s; /* Delay for the second text */
 }
 
-@keyframes flyInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%) translateY(-50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) translateY(-50%);
-  }
+.third-text {
+  animation-delay: 2s; /* Delay for the third text */
 }
 
 .fourth-text {
-  animation-name: flyInLeft;
-  animation-duration: 2s; /* Adjust duration as needed */
-  animation-fill-mode: forwards; /* Keep the final state of the animation */
+  animation-delay: 3s; /* Delay for the fourth text */
+}
+
+.fifth-text {
+  animation-delay: 4s; /* Delay for the fifth text */
 }

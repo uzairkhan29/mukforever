@@ -8,7 +8,7 @@ class Heart {
     this.theta = Math.random() * Math.PI * 2;
     const heartEl = document.createElement("div");
     heartEl.classList.add("heart");
-    document.body.append(heartEl);
+    document.body.append(heartEl); // You might want to append hearts to a container element instead
     const color = pinks[parseInt(Math.random() * pinks.length)];
     heartEl.style.background = color;
     
@@ -26,7 +26,7 @@ class Heart {
     
     setTimeout(() => {
       this.el.remove();
-      this.hearts.splice(this.hearts.indexOf(this));
+      hearts.splice(hearts.indexOf(this)); // Fix: Remove from global array
     }, 10000)
   }
 

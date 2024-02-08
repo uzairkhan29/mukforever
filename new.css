@@ -1,5 +1,5 @@
 body {
-  font-style: Arial;
+  font-family: Arial, sans-serif; /* Changed from font-style to font-family */
   background: black;
 }
 
@@ -12,154 +12,80 @@ body {
   position: relative;
 }
 
-.animation-container {
-  width: 1000rem;
-  height: 30rem;
-}
-
-.first-text {
-  font-size: 4.4rem;
-  position: absolute;
-  left: 2.5rem;
-  top: 5rem;
-  opacity: 0;
-  animation-name: topFadeOut;
-  animation-duration: 5s;
-  color: white;
-}
-
-.second-text {
-  font-size: 3.4rem;
-  position: absolute;
-  top: 8.5rem;
-  opacity: 0;
-  animation-name: rightFadeInOut;
-  animation-delay: 3s;
-  animation-duration: 6s;
-  color: #ccc;
-}
-
-.third-text {
-  transform: rotate(-90deg);
-  font-size: 2rem;
-  position: absolute;
-  left: 45%;
-  top: 45%;
-  opacity: 0;
-  animation-name: topFadeOutVertical;
-  animation-delay: 7.5s;
-  animation-duration: 6s;
-  color: #a3ddf0;
-  white-space: nowrap;
-}
-
-.fourth-text {
-  font-size: 3.4rem;
-  position: absolute;
-  top: 10.5rem;
-  left: 10%;
-  opacity: 0;
-  color: #f0a3be;
-  animation-name: fadeInOut;
-  animation-delay: 8.5s;
-  animation-duration: 9s;
-}
-
+/* Added animation for text fade in and out */
+.first-text,
+.second-text,
+.third-text,
+.fourth-text,
 .fifth-text {
-  font-size: 5rem;
-  position: absolute;
-  left: 5%;
-  bottom: 25%;
   opacity: 0;
-  color: #f0eba3;
-  animation-name: bottomFadeOut;
-  animation-delay: 10s;
-  animation-duration: 9s;
+  animation-duration: 5s; /* Common animation duration for all texts */
+  animation-fill-mode: forwards; /* Keep the final state of the animation */
 }
 
-@keyframes topFadeOut {
-  0% {
-    position: absolute;
-    top: -3rem;
-    opacity: 0;
-  }
-
-  75% {
-    position: absolute;
-    top: 25%;
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes bottomFadeOut {
-  0% {
-    position: absolute;
-    bottom: -5rem;
-    opacity: 0;
-  }
-
-  75% {
-    position: absolute;
-    bottom: 25%;
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes topFadeOutVertical {
-  0% {
-    position: absolute;
-    top: -3rem;
-    opacity: 0;
-  }
-
-  75% {
-    position: absolute;
-    top: 45%;
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes rightFadeInOut {
-  0% {
-    position: absolute;
-    right: -3rem;
-    opacity: 0;
-  }
-
-  75% {
-    position: absolute;
-    right: 10rem;
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    right: 10rem;
-  }
-}
-
+/* Adjusted keyframes for consistent animation */
 @keyframes fadeInOut {
   0% {
     opacity: 0;
   }
-
-  45% {
+  100% {
     opacity: 1;
   }
+}
 
-  100% {
-    opacity: 0%;
+.first-text {
+  animation-name: fadeInOut;
+  animation-delay: 0s; /* No delay for the first text */
+}
+
+.second-text {
+  animation-name: fadeInOut;
+  animation-delay: 3s; /* Delay for the second text */
+}
+
+.third-text {
+  animation-name: fadeInOut;
+  animation-delay: 7s; /* Delay for the third text */
+}
+
+.fourth-text {
+  animation-name: fadeInOut;
+  animation-delay: 8.5s; /* Delay for the fourth text */
+}
+
+.fifth-text {
+  animation-name: fadeInOut;
+  animation-delay: 10s; /* Delay for the fifth text */
+}
+
+/* Added animation for text sliding in from the right */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
   }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.second-text {
+  animation-name: slideInRight; /* Apply sliding animation to second text */
+}
+
+/* Added animation for text sliding in from the left */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fourth-text {
+  animation-name: slideInLeft; /* Apply sliding animation to fourth text */
 }

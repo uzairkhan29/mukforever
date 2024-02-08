@@ -1,4 +1,16 @@
-.letter {
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5d7ab; /* Optional: Add background color */
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .letter {
     display: none;
     position: absolute;
     top: 50%;

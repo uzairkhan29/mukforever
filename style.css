@@ -17,15 +17,25 @@ body {
   top: 50%;
 }
 
+.message {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 30px; /* Adjusted position */
+  font-family: "Poppins", sans-serif;
+  color: #f53162;
+  letter-spacing: 4px;
+  text-transform: capitalize;
+}
+
 .bread {
   width: 150px;
   height: 40px;
   background-color: #f59362;
   border-radius: 40px;
   position: absolute;
-  top: 50px; /* Adjusted position */
+  top: 100px; /* Adjusted position */
   right: 50px;
-  z-index: 1; /* Ensures bread is behind the text */
   animation: shake 0.5s infinite alternate;
 }
 
@@ -248,15 +258,4 @@ body {
   100% {
     transform: translateY(0) scale(1);
   }
-}
-
-.message {
-  width: 100%;
-  position: absolute;
-  text-align: center;
-  top: 20px; /* Adjusted position */
-  font-family: "Poppins", sans-serif;
-  color: #f53162;
-  letter-spacing: 4px;
-  text-transform: capitalize;
 }

@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Ask For Date</title>
-  </head>
-  <body>
+</head>
+<body>
     <img src="date.png" alt="date?" class="header-img" />
     <div class="container" id="container">
-      <img src="erm-fingers.gif" alt="please" class="image-1" />
-      <img src="oh-yay.gif" alt="yes" class="image-2 hide" />
-      <button class="btn btn-yes">Yes</button>
-      <button class="btn btn-no">No</button>
+        <img src="erm-fingers.gif" alt="please" class="image-1" />
+        <img src="oh-yay.gif" alt="yes" class="image-2 hide" />
+        <button class="btn btn-yes" onclick="redirectToIndex4()">Yes</button>
+        <button class="btn btn-no">No</button>
     </div>
     <script src="main.js"></script>
-  </body>
+    <script>
+        // Function to redirect to index4.html
+        function redirectToIndex4() {
+            window.location.href = 'index4.html';
+        }
+    </script>
+</body>
 </html>

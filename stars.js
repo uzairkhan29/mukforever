@@ -139,8 +139,8 @@ function creatMountainRange(mountainAmount, height, color){
 
 // Implementation
 const backgroundGradient = c.createLinearGradient(0, 0, canvas.width, canvas.height)
-backgroundGradient.addColorStop(0, '#171e26')
-backgroundGradient.addColorStop(1, '#3f586b')
+backgroundGradient.addColorStop(0, '#EE8C68')
+backgroundGradient.addColorStop(1, '#EB6B9D')
 
 let stars
 let miniStars
@@ -172,8 +172,8 @@ function animate() {
         backgroundStar.draw()
     })
 
-    if(flag) creatMountainRange(1, canvas.height * 0.7, '#384551')
-    if(flag) creatMountainRange(2, canvas.height * 0.6, '#2B3843')
+    if(flag) creatMountainRange(1, canvas.height * 0.7, '#EE8C68')
+    if(flag) creatMountainRange(2, canvas.height * 0.6, '#EB6B9D')
     if(flag) creatMountainRange(3, canvas.height * 0.4, '#26333E')
     c.fillStyle = '#182028'
     c.fillRect(0, canvas.height - groundHeight, canvas.width, groundHeight)

@@ -174,8 +174,8 @@ function animate() {
 
     if(flag) creatMountainRange(1, canvas.height * 0.7, '#EE8C68')
     if(flag) creatMountainRange(2, canvas.height * 0.6, '#EB6B9D')
-    if(flag) creatMountainRange(3, canvas.height * 0.4, '#26333E')
-    c.fillStyle = '#182028'
+    if(flag) creatMountainRange(3, canvas.height * 0.4, '#3E2631')
+    c.fillStyle = '#281821'
     c.fillRect(0, canvas.height - groundHeight, canvas.width, groundHeight)
     stars.forEach((star, index) => {
         star.update();
@@ -198,7 +198,7 @@ function animate() {
     if(ticker % randomSpawnRate == 0){
         const radius = 9
         const x = Math.max(radius, Math.random() * canvas.width - radius)
-        stars.push(new Star(x, -100, 9, '#E3EAEF'))
+        stars.push(new Star(x, -100, 9, '#F29BCA'))
         randomSpawnRate = Math.floor(Math.random() * (200 - 125 + 1) + 125)
     }
 

@@ -52,7 +52,6 @@ body {
 .upper-text {
     top: 0;
     height: 50%;
-    background-color: #fa9e8c;
     color: #fbceb1;
     text-transform: uppercase;
     z-index: 3;
